@@ -50,13 +50,14 @@ REST_FRAMEWORK = {
 }
 
 AUTH_USER_MODEL = "projects.User"
+APPEND_SLASH=False
 
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "mydb",
-        "USER": "myuser",
-        "PASSWORD": "mypassword",
+        "NAME": "sample_db",
+        "USER": "postgres",
+        "PASSWORD": "root",
         "HOST": "localhost",
         "PORT": "5433",
     }
@@ -90,17 +91,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'backend.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
 
 # Password validation
