@@ -156,7 +156,7 @@ npm run dev
 ## 🌐 Deployment
 
 * Backend deployed on: *[Django Deployment](https://samplepilotproject-production.up.railway.app)*
-* Frontend deployed on: *[<ReactJS Deployment>](https://samplepilotproject-production.up.railway.app)*
+* Frontend deployed on: *[<ReactJS Deployment>](https://vercel.com/maizah-kaleems-projects/sample-pilot-project)*
 
 ---
 
@@ -171,7 +171,7 @@ https://github.com/MaizahK/SamplePilotProject
 ### **2. Online Demo**
 
 ```
-<your deployed app link>
+sample-pilot-project.vercel.app
 ```
 
 ### **3. Video Explanation**
@@ -179,7 +179,6 @@ https://github.com/MaizahK/SamplePilotProject
 In the video:
 
 * Project structure
-* Tenant isolation logic
 * DB schema
 * API flow (frontend → backend → DB → backend → frontend)
 
