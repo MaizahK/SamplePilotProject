@@ -62,7 +62,6 @@ APPEND_SLASH=False
 DATABASES = {
     "default": dj_database_url.config(
         default="postgresql://postgres:OoaNshNfqrsCaywKZYIcpkgToWkNPHJY@maglev.proxy.rlwy.net:42195/railway",
-        conn_max_age=600,
         ssl_require=True
     )
 }
