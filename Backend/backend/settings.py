@@ -11,19 +11,22 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+load_dotenv(BASE_DIR / ".env")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-))4a@kqgiwe4b_62y%wrp=q0ws03+nq+u1ot^)g*-z7=-^tk57'
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv("DEBUG") == "True"
 
 # ALLOWED_HOSTS = []
 
@@ -62,7 +65,7 @@ APPEND_SLASH=False
 
 DATABASES = {
     "default": dj_database_url.config(
-        default="postgresql://postgres:OoaNshNfqrsCaywKZYIcpkgToWkNPHJY@maglev.proxy.rlwy.net:42195/railway",
+        default=os.getenv("DB_CONFIG"),
         ssl_require=True
     )
 }
