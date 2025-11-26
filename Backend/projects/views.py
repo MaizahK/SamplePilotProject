@@ -1,7 +1,9 @@
 from rest_framework import viewsets, permissions
-from .models import Project
-from .serializers import ProjectSerializer
+from rest_framework.response import Response
+from .models import Project, User
+from .serializers import ProjectSerializer, UserSerializer
 from rest_framework.exceptions import PermissionDenied
+
 
 class IsAuthenticatedTenant(permissions.IsAuthenticated):
     def has_permission(self, request, view):
@@ -11,6 +13,13 @@ class IsAuthenticatedTenant(permissions.IsAuthenticated):
             raise PermissionDenied("User has no tenant assigned.")
         return True
 
+class CurrentUserView(viewsets.ModelViewSet):
+    serializer_class = UserSerializer
+    permission_classes = [IsAuthenticatedTenant]
+    http_method_names = ['get']
+
+    def get_queryset(self):
+        return User.objects.filter(id=self.request.user.id)
 
 class ProjectViewSet(viewsets.ModelViewSet):
     serializer_class = ProjectSerializer
