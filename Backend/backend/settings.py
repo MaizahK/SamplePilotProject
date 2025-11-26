@@ -25,7 +25,14 @@ SECRET_KEY = 'django-insecure-))4a@kqgiwe4b_62y%wrp=q0ws03+nq+u1ot^)g*-z7=-^tk57
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+
+import os
+import dj_database_url
+from pathlib import Path
+
+ALLOWED_HOSTS = ["*"]
+
 
 
 # Application definition
@@ -53,14 +60,11 @@ AUTH_USER_MODEL = "projects.User"
 APPEND_SLASH=False
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "sample_db",
-        "USER": "postgres",
-        "PASSWORD": "root",
-        "HOST": "localhost",
-        "PORT": "5433",
-    }
+    "default": dj_database_url.config(
+        default="postgresql://postgres:tUpIjtUeaOrMFmwRTHgYGywJMPorZNYC@yamabiko.proxy.rlwy.net:46120/railway",
+        conn_max_age=600,
+        ssl_require=True
+    )
 }
 
 MIDDLEWARE = [
