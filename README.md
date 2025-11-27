@@ -1,6 +1,6 @@
 # Multi‑Tenant Demo Application
 
-A small, functional demo showcasing a **basic multi-tenant architecture**, **JWT authentication**, **CRUD APIs**, and a **simple React/Next.js frontend**.
+A small, functional demo showcasing a **basic multi-tenant architecture**, **JWT authentication**, **CRUD APIs**, and a **simple React frontend**.
 
 ---
 
@@ -155,8 +155,8 @@ npm run dev
 
 ## 🌐 Deployment
 
-* Backend deployed on: *[Django Deployment](https://samplepilotproject-production.up.railway.app)*
-* Frontend deployed on: *[<ReactJS Deployment>](https://vercel.com/maizah-kaleems-projects/sample-pilot-project)*
+* Backend deployed on: *https://samplepilotproject-production.up.railway.app*
+* Frontend deployed on: *https://vercel.com/maizah-kaleems-projects/sample-pilot-project*
 
 ---
 
@@ -185,7 +185,7 @@ In the video:
 Add your video link here:
 
 ```
-<your Loom video link>
+https://www.loom.com/share/58c1d76a7e4645a0815a51191c1c3246
 ```
 
 ---
