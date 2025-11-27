@@ -171,7 +171,7 @@ https://github.com/MaizahK/SamplePilotProject
 ### **2. Online Demo**
 
 ```
-sample-pilot-project.vercel.app
+https://sample-pilot-project.vercel.app/
 ```
 
 ### **3. Video Explanation**
