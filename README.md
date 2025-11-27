@@ -182,11 +182,7 @@ In the video:
 * DB schema
 * API flow (frontend → backend → DB → backend → frontend)
 
-Add your video link here:
-
-```
 https://www.loom.com/share/58c1d76a7e4645a0815a51191c1c3246
-```
 
 ---
 
